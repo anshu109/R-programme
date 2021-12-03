@@ -1,4 +1,4 @@
-# R-programme
+# R-programming
 # Day 0
 <a href="">Python VS R</a>
 
