@@ -9,6 +9,18 @@
    
    <a href="">Operators</a>
 # Day 2
-   <a href="">More about Data types</a>
-# Day 3
    <a href="">Control Flow</a>
+# Day 3- Day 4
+   <a href="">Data Structures</a>
+# Day 5
+   <a href="">Functions </a>
+# Day 6- Day 8-Day 10
+   <a href=""> OOPS </a>
+# Day 11- Day 12
+   <a href="">Data Intertface</a>
+# Day 13
+   <a href=""> Data Visualization</a>
+# Day 14
+   <a href=""> Statistics using  R>
+# Day 15
+   <a href=""> Project- Linear Regression using R</a>
