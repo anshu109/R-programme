@@ -14,13 +14,15 @@
    <a href="">Data Structures</a>
 # Day 5
    <a href="">Functions </a>
-# Day 6- Day 8-Day 10
+# Day 6- Day 8
    <a href=""> OOPS </a>
-# Day 11- Day 12
+# Day 9- Day 11
    <a href="">Data Intertface</a>
-# Day 13
+# Day 12
    <a href=""> Data Visualization</a>
+# Day 13
+   <a href=""> Statistics using  R </a>
 # Day 14
-   <a href=""> Statistics using  R>
+   <a href=""> Project- Linear Regression using R></a>
 # Day 15
-   <a href=""> Project- Linear Regression using R</a>
+   <a href="" Project Logistic Regression using R></a>
