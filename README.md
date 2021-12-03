@@ -5,7 +5,8 @@
 
 # Day 1
    <a href="https://htmlpreview.github.io/?https://github.com/anshu109/R-programme/blob/main/BSSICS-R.html"> Basics of R and Data types</a>
-   <a href="https://htmlpreview.github.io/?https://github.com/anshu109/R-programme/blob/main/BSSICS-R.html">Operators</a>
+   
+   <a href="">Operators</a>
 # Day 2
    <a href="">More about Data types</a>
 # Day 3
