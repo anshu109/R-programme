@@ -169,19 +169,25 @@ pre code {
 
 <div id="control-statements-in-r-programming" class="section level1">
 <h1>Control Statements in R Programming</h1>
+<div id="r---decision-making" class="section level2">
+<h2>R - Decision making</h2>
+<p>Decision making structures require the programmer to specify one or more conditions to be evaluated or tested by the program, along with a statement or statements to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.</p>
 <p>Control statements are expressions used to control the execution and flow of the program based on the conditions provided in the statements. These structures are used to make a decision after assessing the variable. In this article, we’ll discuss all the control statements with the examples.</p>
 <p>In R programming, there are 8 types of control statements as follows:</p>
-<p>if condition</p>
-<p>if-else condition</p>
-<p>for loop</p>
-<p>nested loops</p>
-<p>while loop</p>
-<p>repeat and break statement</p>
-<p>return statement</p>
-<p>next statement</p>
+<ul>
+<li><p>if condition</p></li>
+<li><p>if-else condition</p></li>
+<li><p>for loop</p></li>
+<li><p>nested loops</p></li>
+<li><p>while loop</p></li>
+<li><p>repeat and break statement</p></li>
+<li><p>return statement</p></li>
+<li><p>next statement</p></li>
+</ul>
+</div>
 <div id="if-condition" class="section level2">
 <h2>if condition</h2>
-<p>This control structure checks the expression provided in parenthesis is true or not. If true, the execution of the statements in braces {} continues.</p>
+<p>An if statement consists of a Boolean expression followed by one or more statements.</p>
 <p>Syntax:</p>
 <p>if(expression){</p>
 <pre><code>statements
@@ -190,13 +196,13 @@ pre code {
 
 ....</code></pre>
 <p>}</p>
+<p>If the Boolean expression evaluates to be true, then the block of code inside the if statement will be executed. If Boolean expression evaluates to be false, then the first set of code after the end of the if statement (after the closing curly brace) will be executed.</p>
 <p>Example:</p>
-<pre class="r"><code>  x &lt;- 100
-
-if(x &gt; 10){
-  print(paste(x, &quot;is greater than 10&quot;))
+<pre class="r"><code>x &lt;- 30L
+if(is.integer(x)) {
+   print(&quot;X is an Integer&quot;)
 }</code></pre>
-<pre><code>## [1] &quot;100 is greater than 10&quot;</code></pre>
+<pre><code>## [1] &quot;X is an Integer&quot;</code></pre>
 </div>
 <div id="excercise" class="section level2">
 <h2>Excercise :</h2>
@@ -204,7 +210,7 @@ if(x &gt; 10){
 </div>
 <div id="if-else-condition" class="section level2">
 <h2>if-else condition</h2>
-<p>It is similar to if condition but when the test expression in if condition fails, then statements in else condition are executed.</p>
+<p>An if statement can be followed by an optional else statement which executes when the boolean expression is false.</p>
 <p>Syntax:</p>
 <p>if(expression){</p>
 <pre><code>statements
@@ -218,6 +224,7 @@ if(x &gt; 10){
 <p>….</p>
 <p>….</p>
 <p>}</p>
+<p>If the Boolean expression evaluates to be true, then the if block of code will be executed, otherwise the else block of code will be executed.</p>
 <p>Example:</p>
 <pre class="r"><code>x &lt;- 5
 
@@ -229,9 +236,63 @@ if(x &gt; 10){
 }</code></pre>
 <pre><code>## [1] &quot;5 is less than 10&quot;</code></pre>
 </div>
+<div id="if.else-if..else-statement" class="section level2">
+<h2>If….else if…..else Statement :</h2>
+<p>An if statement can be followed by an optional else if…else statement, which is very useful to test various conditions using single if…else if statement.</p>
+<p>When using if, else if, else statements there are few points to keep in mind.</p>
+<p>An if can have zero or one else and it must come after any else if’s.</p>
+<p>An if can have zero to many else if’s and they must come before the else.</p>
+<p>Once an else if succeeds, none of the remaining else if’s or else’s will be tested.</p>
+<p>Syntax :</p>
+<p>if(boolean_expression 1) {</p>
+<p>// Executes when the boolean expression 1 is true.</p>
+<p>} else if( boolean_expression 2) {</p>
+<p>// Executes when the boolean expression 2 is true.</p>
+<p>} else if( boolean_expression 3) {</p>
+<p>// Executes when the boolean expression 3 is true.</p>
+<p>} else {</p>
+<p>// executes when none of the above condition is true. }</p>
+<p>Example :</p>
+<pre class="r"><code>x &lt;- c(&quot;what&quot;,&quot;is&quot;,&quot;truth&quot;)
+
+if(&quot;Truth&quot; %in% x) {
+   print(&quot;Truth is found the first time&quot;)
+} else if (&quot;truth&quot; %in% x) {
+   print(&quot;truth is found the second time&quot;)
+} else {
+   print(&quot;No truth found&quot;)
+}</code></pre>
+<pre><code>## [1] &quot;truth is found the second time&quot;</code></pre>
+</div>
+<div id="switch-statement" class="section level2">
+<h2>Switch Statement :</h2>
+<p>A switch statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each case.</p>
+<p>Syntax :</p>
+<p>switch(expression, case1, case2, case3….)</p>
+<p>The following rules apply to a switch statement −</p>
+<ul>
+<li><p>If the value of expression is not a character string it is coerced to integer.</p></li>
+<li><p>You can have any number of case statements within a switch. Each case is followed by the value to be compared to and a colon.</p></li>
+<li><p>If the value of the integer is between 1 and nargs()−1 (The max number of arguments)then the corresponding element of case condition is evaluated and the result returned.</p></li>
+<li><p>If expression evaluates to a character string then that string is matched (exactly) to the names of the elements.</p></li>
+<li><p>If there is more than one match, the first matching element is returned.</p></li>
+<li><p>No Default argument is available.</p></li>
+<li><p>In the case of no match, if there is an unnamed element of … its value is returned. (If there is more than one such argument an error is returned.)</p></li>
+</ul>
+<p>Example :</p>
+<pre class="r"><code>x &lt;- switch(
+   3,
+   &quot;first&quot;,
+   &quot;second&quot;,
+   &quot;third&quot;,
+   &quot;fourth&quot;
+)
+print(x)</code></pre>
+<pre><code>## [1] &quot;third&quot;</code></pre>
+</div>
 <div id="for-loop" class="section level2">
 <h2>for loop</h2>
-<p>It is a type of loop or sequence of statements executed repeatedly until exit condition is reached.</p>
+<p>A For loop is a repetition control structure that allows you to efficiently write a loop that needs to execute a specific number of times.</p>
 <p>Syntax:</p>
 <p>for(value in vector){</p>
 <pre><code>statements
@@ -314,6 +375,74 @@ while(x &lt;= 5){
 <div id="excercise-2" class="section level2">
 <h2>Excercise :</h2>
 <p>Display the numbers from 4 to 100 using the while loop</p>
+</div>
+<div id="repeat-loop" class="section level2">
+<h2>Repeat loop :</h2>
+<p>The Repeat loop executes the same code again and again until a stop condition is met.</p>
+<p>Example :</p>
+<pre class="r"><code>v &lt;- c(&quot;Hello&quot;,&quot;loop&quot;)
+cnt &lt;- 2
+repeat {
+   print(v)
+   cnt &lt;- cnt+1
+      if(cnt &gt; 5) {  
+      break
+   }
+}</code></pre>
+<pre><code>## [1] &quot;Hello&quot; &quot;loop&quot; 
+## [1] &quot;Hello&quot; &quot;loop&quot; 
+## [1] &quot;Hello&quot; &quot;loop&quot; 
+## [1] &quot;Hello&quot; &quot;loop&quot;</code></pre>
+</div>
+<div id="loop-control-statements" class="section level2">
+<h2>Loop Control Statements :</h2>
+<p>Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed.</p>
+</div>
+<div id="break-statement" class="section level2">
+<h2>Break Statement :</h2>
+<p>The break statement in R programming language has the following two usages −</p>
+<ul>
+<li><p>When the break statement is encountered inside a loop, the loop is immediately terminated and program control resumes at the next statement following the loop.</p></li>
+<li><p>It can be used to terminate a case in the switch statement (covered in the next chapter).</p></li>
+</ul>
+<p>Syntax :</p>
+<p>Break</p>
+<p>Example :</p>
+<pre class="r"><code>v &lt;- c(&quot;Hello&quot;,&quot;loop&quot;)
+cnt &lt;- 2
+
+repeat {
+   print(v)
+   cnt &lt;- cnt + 1
+    
+   if(cnt &gt; 5) {
+      break
+   }
+}</code></pre>
+<pre><code>## [1] &quot;Hello&quot; &quot;loop&quot; 
+## [1] &quot;Hello&quot; &quot;loop&quot; 
+## [1] &quot;Hello&quot; &quot;loop&quot; 
+## [1] &quot;Hello&quot; &quot;loop&quot;</code></pre>
+</div>
+<div id="next-statement" class="section level2">
+<h2>Next Statement :</h2>
+<p>The next statement in the R programming language is useful when we want to skip the current iteration of a loop without terminating it. On encountering next, the R parser skips further evaluation and starts the next iteration of the loop.</p>
+<p>Syntax :</p>
+<p>next</p>
+<p>Example :</p>
+<pre class="r"><code>v &lt;- LETTERS[1:6]
+for ( i in v) {
+   
+   if (i == &quot;D&quot;) {
+      next
+   }
+   print(i)
+}</code></pre>
+<pre><code>## [1] &quot;A&quot;
+## [1] &quot;B&quot;
+## [1] &quot;C&quot;
+## [1] &quot;E&quot;
+## [1] &quot;F&quot;</code></pre>
 </div>
 </div>
 
