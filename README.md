@@ -7,7 +7,7 @@
 # Day 1
    <a href="https://htmlpreview.github.io/?https://github.com/anshu109/R-programme/blob/main/BSSICS-R.html"> Basics of R and Data types</a>
    
-   <a href="">Operators</a>
+   <a href="https://htmlpreview.github.io/?https://github.com/anshu109/R-programme/blob/main/operators.html">Operators</a>
 # Day 2
    <a href="https://htmlpreview.github.io/?https://github.com/anshu109/R-programme/blob/main/flow-control.html">Control Flow</a>
 # Day 3- Day 4
