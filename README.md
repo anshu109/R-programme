@@ -1,6 +1,6 @@
 # R-programming
 # Day 0
-<a href="https://www.ibm.com/cloud/blog/python-vs-r">Python VS R</a>
+<a href="https://github.com/anshu109/python-vs-r/blob/main/README.md">Python VS R</a>
 
 <a href="https://github.com/anshu109/R-programme/blob/5535352eeac18809b20b07f452297cf5d737513d/STEP%201A%20%20.md"> Installation of R and R studio </a>
 
